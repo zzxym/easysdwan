@@ -230,7 +230,8 @@ const portForwardProtocolOptions = ref(["tcp","udp"]);
                 </div>
               </div>
 
-              <div class="flex flex-row gap-x-9 flex-wrap" v-if="false">
+              <!-- 网络方式部分已隐藏 -->
+              <div v-if="false" class="flex flex-row gap-x-9 flex-wrap">
                 <div class="flex flex-col gap-2 basis-5/12 grow">
                   <label for="nm">{{ t('networking_method') }}</label>
                   <SelectButton v-model="curNetwork.networking_method" :options="networking_methods"
