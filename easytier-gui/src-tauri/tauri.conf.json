@@ -31,6 +31,28 @@
       "shell": {
         "all": false,
         "open": true
+      },
+      "fs": {
+        "all": false,
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "copyFile": true,
+        "createDir": true,
+        "removeDir": true,
+        "removeFile": true,
+        "renameFile": true,
+        "scope": [
+          "$HOME/**",
+          "$APPDATA/**",
+          "$LOCALAPPDATA/**",
+          "$USERPROFILE/**"
+        ]
+      },
+      "path": {
+        "all": false,
+        "resolve": true,
+        "join": true
       }
     },
     "bundle": {
@@ -49,7 +71,7 @@
         "icons/icon.ico"
       ],
       "identifier": "com.zzxym.sdwan",
-      "longDescription": "",
+      "longDescription": "A GUI tool to manage \"EasyTier\" based SDWAN connections",
       "macOS": {
         "entitlements": null,
         "exceptionDomain": "",
@@ -58,7 +80,7 @@
         "signingIdentity": null
       },
       "resources": [],
-      "shortDescription": "",
+      "shortDescription": "EasyTier GUI for \"SDWAN\" deployment",
       "targets": "all",
       "windows": {
         "certificateThumbprint": null,
@@ -66,12 +88,11 @@
         "timestampUrl": "",
         "identifier": "com.zzxym.sdwan"
       },
-      // 新增安卓配置，与Cargo.toml的package_name保持一致
       "android": {
         "identifier": "com.zzxym.sdwan",
         "minSdkVersion": 24,
         "targetSdkVersion": 33,
-        "permissions": ["INTERNET"] // 基础网络权限，根据项目需求可补充
+        "permissions": ["INTERNET"]
       }
     },
     "security": {
